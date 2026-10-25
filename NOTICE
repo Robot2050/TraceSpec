@@ -1,0 +1,63 @@
+TraceSpec
+Third-party attribution
+
+This distribution includes modified or unmodified components from the projects
+listed below. Their original licenses and copyright statements are preserved in
+the referenced locations. Inclusion does not imply endorsement by the upstream
+authors.
+
+DeepSpec
+  Source: https://github.com/deepseek-ai/DeepSpec
+  License: MIT, Copyright (c) 2026 The DeepSpec Authors
+  Location: agentspec/vendor/deepspec
+  License file: agentspec/vendor/deepspec/LICENSE
+  Changes: imports are namespaced for this distribution and the evaluators are
+  connected to the trajectory evaluation backend.
+
+LongSpark
+  License: MIT, Copyright (c) 2026 The LongSpark Authors
+  Location: agentspec/vendor/longspark
+  License file: agentspec/vendor/longspark/LICENSE
+  Changes: the runtime is packaged for per-turn agent evaluation.
+
+SGLang
+  Source: https://github.com/sgl-project/sglang
+  License: Apache-2.0
+  Location: agentspec/vendor/sglang.tar.gz
+  License file: sglang/LICENSE inside the archive
+  The bundled runtime includes LongSpark modifications. Original in-file
+  notices and embedded third-party attributions are retained.
+
+SpecForge
+  Source: https://github.com/sgl-project/SpecForge
+  License: MIT, Copyright (c) 2025 sgl-project
+  Location: agentspec/vendor/specforge
+  License file: agentspec/vendor/specforge/LICENSE
+  The source inventory and LongSpark extensions are documented in
+  agentspec/vendor/specforge/VENDOR_README.md.
+
+DLite
+  Source: https://github.com/SJTU-DAI-Sys/DLite
+  License: MIT
+  Location: agentspec/vendor/dlite
+  License file: agentspec/vendor/dlite/LICENSE
+  Changes: the draft model is connected to the shared verification loop and
+  metric accounting used by the native PyTorch evaluators.
+
+verl
+  Source: https://github.com/volcengine/verl
+  License: Apache-2.0, Copyright 2024 Bytedance Ltd. and/or its affiliates
+  The Gather helper in agentspec/vendor/specforge/distributed.py is adapted
+  from verl/utils/ulysses.py at commit
+  a0e8e4472b8b472409defb0c8fcc5162301450af.
+
+Evaluation data and model weights
+
+Benchmark instances, queries, corpus documents, repository snapshots, and model
+weights remain subject to their upstream terms. The TraceSpec code license does
+not relicense those materials.
+
+TraceSpec-Traj contains trajectory-derived evaluation states from
+DeepResearch-traj, Nebius SWE-agent trajectories, and the R2E-Gym development
+and testing-agent collections. Source identifiers are retained in each state.
+The accompanying paper describes the state construction and coverage protocol.

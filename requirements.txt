@@ -1,0 +1,6 @@
+torch>=2.9,<3
+transformers>=5.10,<6
+numpy>=1.26
+PyYAML>=6.0
+prettytable>=3.10
+tqdm>=4.66
